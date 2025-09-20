@@ -33,6 +33,6 @@ makecourt: makecourt.c Makefile AXL/axl.o
 	-indent -pmt $< 
 	cc -O -o $@ $< ${OPTS} -lpopt -DMAIN AXL/axl.o -lcurl
 
-SVGFILES := $(wildcard ../svg/??.svg)
+SVGFILES := $(wildcard ./svg/??.svg)
 court.h: makecourt ${SVGFILES}
 	./makecourt
